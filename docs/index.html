@@ -1,0 +1,349 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "./"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="#APIError">type APIError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CreateAPIError">func CreateAPIError(code int, message string) *APIError</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#APIError.Error">func (e *APIError) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="#Client">type Client</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Client.GetError">func (c *Client) GetError() *APIError</a></dd>
+				
+			
+				
+				<dd><a href="#Resource">type Resource</a></dd>
+				
+				
+			
+				
+				<dd><a href="#User">type User</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/target/api.go">api.go</a>
+			
+				<a href="/src/target/client.go">client.go</a>
+			
+				<a href="/src/target/error.go">error.go</a>
+			
+				<a href="/src/target/resource.go">resource.go</a>
+			
+				<a href="/src/target/user.go">user.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<pre>const (
+    <span id="US_HOST">US_HOST</span> <a href="/pkg/builtin/#string">string</a> = &#34;swrve.com&#34;
+)</pre>
+				
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="APIError">type <a href="/src/target/error.go?s=72:125#L1">APIError</a>
+				<a class="permalink" href="#APIError">&#xb6;</a>
+			</h2>
+			<pre>type APIError struct {
+    Code    <a href="/pkg/builtin/#int">int</a>
+    Message <a href="/pkg/builtin/#string">string</a>
+}</pre>
+			<p>
+SwrveError represents API errors
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="CreateAPIError">func <a href="/src/target/error.go?s=351:406#L9">CreateAPIError</a>
+					<a class="permalink" href="#CreateAPIError">&#xb6;</a>
+				</h3>
+				<pre>func CreateAPIError(code <a href="/pkg/builtin/#int">int</a>, message <a href="/pkg/builtin/#string">string</a>) *<a href="#APIError">APIError</a></pre>
+				<p>
+CreateAPIError creates a pointer to a populated new APIError object.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="APIError.Error">func (*APIError) <a href="/src/target/error.go?s=190:223#L4">Error</a>
+					<a class="permalink" href="#APIError.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="#APIError">APIError</a>) Error() <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+Error adheres to hte Error interface by returning a string.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Client">type <a href="/src/target/client.go?s=74:113#L1">Client</a>
+				<a class="permalink" href="#Client">&#xb6;</a>
+			</h2>
+			<pre>type Client struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			<p>
+Client represent an API client for the Swrve service.
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Client.GetError">func (*Client) <a href="/src/target/client.go?s=160:197#L1">GetError</a>
+					<a class="permalink" href="#Client.GetError">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="#Client">Client</a>) GetError() *<a href="#APIError">APIError</a></pre>
+				<p>
+GetError retrieves the last client error.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Resource">type <a href="/src/target/resource.go?s=58:155#L1">Resource</a>
+				<a class="permalink" href="#Resource">&#xb6;</a>
+			</h2>
+			<pre>type Resource struct {
+    Title      <a href="/pkg/builtin/#string">string</a>
+    KeyName    <a href="/pkg/builtin/#string">string</a>
+    Properties map[<a href="/pkg/builtin/#string">string</a>]interface{}
+}</pre>
+			<p>
+Resource represents a Swrve resource.
+</p>
+
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="User">type <a href="/src/target/user.go?s=17:48#L1">User</a>
+				<a class="permalink" href="#User">&#xb6;</a>
+			</h2>
+			<pre>type User struct {
+    ID <a href="/pkg/builtin/#string">string</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="..">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="docs/">docs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
